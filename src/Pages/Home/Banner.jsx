@@ -9,25 +9,27 @@ const Banner = () => {
   const [isSignIn, setIsSignIn] = useState(true);
 
   return (
-    <div className="flex justify-between gap-24 pt-24 items-center px-16 bg-[#F7F5F9]">
+    <div className="flex flex-col lg:flex-row justify-between  lg:gap-24 pt-8 lg:pt-24 items-center px-6 lg:px-16 bg-[#F7F5F9]">
       <div className="lg:w-[60%]">
-        <h1 className="text-4xl italic font-semibold mb-8">
+        <h1 className="text-xl lg:text-4xl italic font-semibold mb-4 lg:mb-8">
           Explore your <span className="text-[#0096C8]">hobby</span> or{" "}
           <span className="text-[#8064A2]">passion</span>
         </h1>
-        <p className="text-sm leading-6">
+        <p className="text-sm lg:leading-6 max-lg:mb-10">
           Sign-in to interact with a community of fellow hobbyists and an
           eco-system of experts, teachers, suppliers, classes, workshops, and
-          places to practice, participate or perform. Your hobby may be about
-          visual or performing arts, sports, games, gardening, model making,
-          cooking, indoor or outdoor activities…
+          places to practice, participate or perform.{" "}
+          <span className="hidden lg:flex">
+            Your hobby may be about visual or performing arts, sports, games,
+            gardening, model making, cooking, indoor or outdoor activities…
+          </span>
         </p>
-        <p className="text-sm mt-4 mb-24 leading-6">
+        <p className="hidden lg:flex text-sm mt-4 mb-24 leading-6">
           If you are an expert or a seller, you can Add your Listing and promote
           yourself, your students, products, services or events. Hop on your
           hobbyhorse and enjoy the ride.
         </p>
-        <img className="w-full " src={BannerImg} alt="image" />
+        <img className="w-full hidden lg:block" src={BannerImg} alt="image" />
       </div>
       <div className="lg:w-[40%]">
         <div className="flex gap-5 mb-8">
@@ -48,16 +50,18 @@ const Banner = () => {
             Join In
           </span>
         </div>
-        <div className="h-[450px] ">
-          <button className="disabled:cursor-not-allowed w-full flex  items-center  border mb-4 md:px-8  px-1 py-2 hover:shadow-xl border-[#8064A2] rounded-lg font-semibold cursor-pointer">
-            <FcGoogle size={20} />
+        <div className="h-[400px] lg:h-[450px] flex flex-col-reverse lg:flex-col w-full">
+          <div>
+            <button className="disabled:cursor-not-allowed w-full flex  items-center  jus border mb-4 md:px-8  px-1 py-2 hover:shadow-xl border-[#8064A2] rounded-lg font-semibold cursor-pointer">
+              <FcGoogle size={20} />
 
-            <p className="text-center w-full">Continue with Google</p>
-          </button>
-          <button className="disabled:cursor-not-allowed w-full flex  items-center  border  lg:px-8 md:px-2 px-1 py-2 hover:shadow-xl border-[#8064A2] rounded-lg  font-semibold cursor-pointer">
-            <img src={Facebook} alt="" />
-            <p className="text-center w-full">Continue with Google</p>
-          </button>
+              <p className="text-center w-full">Continue with Google</p>
+            </button>
+            <button className="disabled:cursor-not-allowed w-full flex  items-center  border  lg:px-8 md:px-2 px-1 py-2 hover:shadow-xl border-[#8064A2] rounded-lg  font-semibold cursor-pointer">
+              <img src={Facebook} alt="" />
+              <p className="text-center w-full">Continue with Google</p>
+            </button>
+          </div>
 
           <div className="divider my-7 font-semibold">Or connect with</div>
           {/* login form */}
@@ -86,7 +90,7 @@ const Banner = () => {
                 )}
               </span>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex gap-[60px] justify-between items-center">
               <label className="cursor-pointer label">
                 <input type="checkbox" className="checkbox checkbox-info" />
                 <span className="label-text text-sm ml-1">Remember me</span>
@@ -95,6 +99,7 @@ const Banner = () => {
                 Forgot Password?
               </a>
             </div>
+
             <button className="font-semibold w-full border border-black py-3 rounded-lg text-black">
               Continue
             </button>
@@ -139,6 +144,7 @@ const Banner = () => {
           </form>
         </div>
       </div>
+      <img className="w-full mt-12 lg:hidden" src={BannerImg} alt="image" />
     </div>
   );
 };

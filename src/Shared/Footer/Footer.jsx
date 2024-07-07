@@ -6,21 +6,26 @@ import gplus from "../../assets/gplus.png";
 import youtube from "../../assets/youtube.png";
 import telegram from "../../assets/telegram.png";
 import email from "../../assets/email.png";
+import { IoIosArrowUp } from "react-icons/io";
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer  text-base-content py-14 px-24">
-        <nav>
-          <h6 className="font-bold">Hobbycue</h6>
+      <footer className="footer  text-base-content lg:py-14 lg:px-24 px-6 py-8">
+        <nav className="max-lg:w-full">
+          <h6 className="font-bold max-lg:flex max-lg:justify-between max-lg:items-center max-lg:w-full">
+            Hobbycue <IoIosArrowUp className="lg:hidden font-bold text-lg" />
+          </h6>
           <a className="link link-hover">About Us</a>
           <a className="link link-hover">Our Services</a>
           <a className="link link-hover">Work with Us</a>
           <a className="link link-hover">FAQ</a>
           <a className="link link-hover">Contact Us</a>
         </nav>
-        <nav>
-          <h6 className="font-bold">How Do I</h6>
+        <nav className="max-lg:w-full">
+          <h6 className="font-bold max-lg:flex max-lg:justify-between max-lg:items-center max-lg:w-full">
+            How Do I <IoIosArrowUp className="lg:hidden font-bold text-lg" />
+          </h6>{" "}
           <a className="link link-hover">Sign Up</a>
           <a className="link link-hover">Add a Listing</a>
           <a className="link link-hover">Claim Listing</a>
@@ -28,8 +33,10 @@ const Footer = () => {
           <a className="link link-hover">Add a Blog Post</a>
           <a className="link link-hover">Other Queries</a>
         </nav>
-        <nav>
-          <h6 className="font-bold">Quick Links</h6>
+        <nav className="max-lg:w-full">
+          <h6 className="font-bold max-lg:flex max-lg:justify-between max-lg:items-center max-lg:w-full">
+            Quick Links <IoIosArrowUp className="lg:hidden font-bold text-lg" />
+          </h6>{" "}
           <a className="link link-hover">Listings</a>
           <a className="link link-hover">Blog Posts</a>
           <a className="link link-hover">Shop / Store</a>
@@ -85,7 +92,7 @@ const Footer = () => {
           </form>
         </div>
       </footer>
-      <footer className="footer footer-center bg-[#F7F5F9] text-base-content p-4 pt-7 pb-6">
+      <footer className="footer footer-center bg-[#F7F5F9] text-base-content p-4 lg:pt-7 lg:pb-6">
         <aside>
           <p className="font-medium">
             Copyright © {new Date().getFullYear()} - Purple Cues Private Limited
