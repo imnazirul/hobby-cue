@@ -32,7 +32,7 @@ const Banner = () => {
         <img className="w-full hidden lg:block" src={BannerImg} alt="image" />
       </div>
       <div className="lg:w-[40%]">
-        <div className="flex gap-5 mb-8">
+        <div className="flex gap-10 lg:gap-8 max-lg:justify-center mb-8">
           <span
             onClick={() => setIsSignIn(true)}
             className={`${

@@ -22,7 +22,7 @@ const Testimonial = () => {
           safely explore various hobbies and activities in my city, all under
           one roof, is an excellent idea and I highly recommend it.
         </p>
-        <div className="flex flex-1 flex-col-reverse  gap-2">
+        <div className="flex flex-1 flex-col-reverse lg:flex-row  gap-2">
           <div className="lg:w-[70%]">
             <img src={Audio} alt="audio" />
           </div>
